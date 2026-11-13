@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table</title>
+</head>
+
+<body>
+    <table>
+        <caption>Class Roster</caption>
+        <thead> <!-- the header of the table-->
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Major</th>
+                <th>GPA</th>
+            </tr>
+        </thead>
+
+        <tbody><!--body section-->
+            <tr> <!--first student. tr= table row-->
+                <td>Alice</td> <!--td= table data-->
+                <td>20</td>
+                <td>Journalism</td>
+                <td>3.5</td>
+            </tr>
+            <tr> <!--second student-->
+                <td>Bob</td>
+                <td>22</td>
+                <td>Design</td>
+                <td>3.2</td>
+            </tr>
+        </tbody>
+    </table>
+
+<form action="/submit" method="get">
+    <fieldset>
+        <legend> Contact Information</legend>
+        
+        <label for="first-name">Name:</label>
+        <input type="name" id="first-name" name="first-name" placeholder="Your full name..." required>
+        <br></br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email..." required>
+        <br></br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number..." required>
+    </fieldset>
+    <br></br>
+    <label for="service">Service:</label>
+    <select name="services" id="service">
+        <option value="select">Select a service...</option>
+        <option value="art">Art Direction</option>
+        <option value="brand">Brand Film</option>
+        <option value="colour">Colour Finish</option>
+    </select>
+
+    <br></br>
+    <fieldset>
+        <legend>Budget Range</legend>
+        <!--the webpage knows these are all related because they have the same name=""-->
+        <input type="radio" name="budget" id="budget-1">
+        <label for="budget-1">Under 5k</label>
+        <input type="radio" name="budget" id="budget-2">
+        <label for="budget-2">Over 5k</label>
+        <input type="radio" name="budget" id="budget-3">
+        <label for="budget-3">Over 10k</label>
+    </fieldset>
+    <br></br>
+
+    <!--<textarea:cols:rows-->
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" cols="15" placeholder="Enter your message...">
+    </textarea> <!--cols= width, rows= height. most of the time, they dont use columns?-->
+    <br></br>
+    <button type="submit">Send</button>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Geist:wght@400..700&family=Geist+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ===== TICKER ===== -->
+  <div class="ticker">
+    <div class="ticker-track">
+      <span>Session 04 on the roof · Nov 14</span>
+      <span>✶</span>
+      <span>Spring '27 artist submissions are open</span>
+      <span>✶</span>
+      <span>Side B Tapes Vol. 2 out now</span>
+      <span>🔥🔥🔥</span>
+      <span>Free with student ID</span>
+      <span>✶</span>
+      <span>Session 04 on the roof · Nov 14</span>
+      <span>✶</span>
+      <span>Spring '27 artist submissions are open</span>
+      <span>✶</span>
+      <span>Side B Tapes Vol. 2 out now</span>
+      <span>🔥🔥🔥</span>
+      <span>Free with student ID</span>
+      <span>✶</span>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <a href="index.html" class="logo-link">
+      <img src="images/logo.svg" class="logo">
+    </a>
+
+    <div class="nav">
+      <a href="#shows">Shows</a>
+      <a href="#artists">Artists</a>
+      <a href="#sessions">Sessions</a>
+      <a href="#crew" tabindex="2">Join the crew</a>
+      <a href="#merch">Merch</a>
+    </div>
+
+    <div class="header-tools">
+      <form class="search" action="#">
+        <input type="search" placeholder="Search artists">
+        <button tabindex="1">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7" />
+            <line x1="16.5" y1="16.5" x2="21" y2="21" />
+          </svg>
+        </button>
+      </form>
+      <a href="#merch" class="icon-link">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 8h14l-1.5 12h-11z" />
+          <path d="M9 8V6a3 3 0 0 1 6 0v2" />
+        </svg>
+      </a>
+      <a href="#shows" class="btn-tickets" aria-hidden="true">Tickets</a>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <!-- ===== HERO ===== -->
+    <div class="hero">
+      <div class="hero-panel">
+        <p class="kicker">✶ Student-run label + live sessions ✶ Est. 2021</p>
+        <div class="hero-title" aria-hidden="true">B-SIDE</div>
+        <p class="hero-sub">The songs nobody skips.</p>
+        <p class="hero-text">We're a student-run record label. We find artists on campus, record them live, and release
+          everything: the audio, the video, the photos and the cover art. All of it is made by students like you.</p>
+
+        <div class="hero-actions">
+          <a class="btn btn-white" role="button">Get tickets</a>
+          <a href="#sessions" class="btn-line">
+            Watch Session 03
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <title>arrow right icon</title>
+              <line x1="4" y1="12" x2="19" y2="12" />
+              <polyline points="13 6 19 12 13 18" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="images/hero-stage.jpg" alt="hero image" class="hero-img">
+        <p class="photo-caption">Session 03 · shot by our video crew</p>
+        <div class="label-card">
+          <p class="cat">BSD—004</p>
+          <p class="label-title">Session 04: On the Roof</p>
+          <p class="label-meta">Nov 14 · Doors 7 PM · Media Building rooftop</p>
+        </div>
+        <div class="sticker">FREE<br><span>w/ student ID</span></div>
+      </div>
+    </div>
+
+    <!-- ===== UP NEXT ===== -->
+    <div class="shows" id="shows">
+      <div class="section-top">
+        <span class="num">(01)</span>
+        <h3 class="section-heading">Up next</h3>
+        <p class="section-intro">Four nights left this semester. Doors open at 7 PM, and every show is filmed, so come
+          ready to be in the crowd shot.</p>
+      </div>
+
+      <div class="table-wrap">
+        <table class="shows-table">
+          <tr class="table-head">
+            <td>Date</td>
+            <td>Show</td>
+            <td>Who's playing</td>
+            <td>Where</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="date">Nov 14</td>
+            <td class="show-name">Session 04: On the Roof</td>
+            <td>Mara Lune, Static Hearts</td>
+            <td class="venue">Media Building rooftop</td>
+            <td><span class="dot dot-red" title="Sold out"></span></td>
+          </tr>
+          <tr>
+            <td class="date">Nov 21</td>
+            <td class="show-name">Tape Night</td>
+            <td>Theo Banks (live beats)</td>
+            <td class="venue">Studio B</td>
+            <td><span class="dot dot-green" title="On sale"></span></td>
+          </tr>
+          <tr>
+            <td class="date">Dec 05</td>
+            <td class="show-name">Winter Showcase</td>
+            <td>Every B-SIDE artist</td>
+            <td class="venue">Black Box Theater</td>
+            <td><span class="dot dot-amber" title="Few left"></span></td>
+          </tr>
+          <tr>
+            <td class="date">Dec 12</td>
+            <td class="show-name">Open Mic + Crew Mixer</td>
+            <td>You, probably</td>
+            <td class="venue">The Basement</td>
+            <td><span class="dot dot-green" title="On sale"></span></td>
+          </tr>
+        </table>
+      </div>
+
+      <p class="table-note">Can't make it? <a href="#sessions" class="text-link">Click here</a> to watch past sessions.
+      </p>
+    </div>
+
+    <h2 class="spacer"></h2>
+
+    <!-- ===== ARTISTS ===== -->
+    <div class="artists" id="artists" aria-labelledby="artists-heading">
+      <div class="section-top">
+        <span class="num">(02)</span>
+        <h3 class="section-heading" id="artists-title">The roster</h3>
+        <p class="section-intro">Five artists, all students, all signed this year. Hover to meet them.</p>
+      </div>
+
+      <div class="roster">
+        <a href="#" class="artist artist-big">
+          <img src="images/headliner.jpg">
+          <span class="badge">BSD—01 · Headliner</span>
+          <div class="artist-info">
+            <h5>Mara Lune</h5>
+            <p>Big-room heartbreak pop</p>
+          </div>
+        </a>
+
+        <a href="#" class="artist">
+          <img src="images/IMG_4471.jpg" alt="IMG_4471.jpg">
+          <span class="badge">BSD—02</span>
+          <div class="artist-info">
+            <h5>Static Hearts</h5>
+            <p>Garage rock, loud on purpose</p>
+          </div>
+        </a>
+
+        <a href="#" class="artist">
+          <img src="images/artist-guitar.jpg" alt="image of a picture of a girl with a guitar">
+          <span class="badge">BSD—03</span>
+          <div class="artist-info">
+            <h5>June Avery</h5>
+            <p>Bedroom folk, recorded in a dorm closet</p>
+          </div>
+        </a>
+
+        <a href="#" class="artist">
+          <img src="images/artist-producer.jpg" alt="Theo Banks wearing red headphones">
+          <span class="badge">BSD—04</span>
+          <div class="artist-info">
+            <h5>Theo Banks</h5>
+            <p>Beats and bars</p>
+          </div>
+        </a>
+
+        <a href="#" class="artist">
+          <img src="images/artist-dj.jpg">
+          <span class="badge">BSD—05</span>
+          <div class="artist-info">
+            <h5>NITE DUTY</h5>
+            <p>DJ duo, Jersey club and house</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- ===== SESSIONS ===== -->
+    <div class="sessions" id="sessions">
+      <div class="section-top">
+        <span class="num">(03)</span>
+        <div class="section-title">Watch the sessions</div>
+      </div>
+
+      <div class="session-grid">
+        <div class="session">
+          <a href="#" class="thumb">
+            <img src="images/session-live.jpg">
+            <span class="play">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <polygon points="7 4 20 12 7 20" />
+              </svg>
+            </span>
+            <span class="time">12:48</span>
+          </a>
+          <p class="session-tag">Session 03</p>
+          <p class="session-title">Static Hearts, live in the Black Box</p>
+        </div>
+
+        <div class="session">
+          <a href="#" class="thumb">
+            <img src="images/session-studio.jpg" alt="">
+            <span class="play">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <polygon points="7 4 20 12 7 20" />
+              </svg>
+            </span>
+            <span class="time">08:15</span>
+          </a>
+          <p class="session-tag">Behind the scenes</p>
+          <p class="session-title">Studio diary: mixing Side B Tapes Vol. 2</p>
+        </div>
+
+        <div class="session">
+          <a href="#" class="thumb">
+            <img src="images/session-rooftop.jpg" alt="thumbnail">
+            <span class="play">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                <polygon points="7 4 20 12 7 20" />
+              </svg>
+            </span>
+            <span class="time">45:02</span>
+          </a>
+          <p class="session-tag">After hours</p>
+          <p class="session-title">NITE DUTY: a 45-minute set</p>
+        </div>
+      </div>
+
+      <p class="sessions-note">Every session is shot on three cameras by our video crew and mixed by our sound team.
+        Full sets go up on our channel every other Friday, <a href="#" class="text-link">click here</a>.</p>
+    </div>
+
+    <!-- ===== JOIN THE CREW ===== -->
+    <div class="crew" id="crew">
+      <img src="images/torn-posters.jpg" class="crew-strip"
+        alt="colorful torn paper posters layered on top of each other on a wall in the street with lots of words and textures">
+
+      <div class="crew-inner">
+        <div class="crew-copy">
+          <span class="num">(04)</span>
+          <h2 class="crew-heading">Join the crew</h2>
+          <p class="crew-intro">No experience needed. We teach you on real shoots, real sessions and real releases.
+            Bring a phone, a laptop, or just a good ear.</p>
+
+          <div class="roles">
+            <div class="role">
+              <img src="images/crew-video.jpg">
+              <h6>Video</h6>
+              <p>Run a camera on session night.</p>
+            </div>
+            <div class="role">
+              <img src="images/crew-photo.jpg" alt="Photographer in a red jacket taking a photo on a city street">
+              <h6>Photo</h6>
+              <p>Shoot the crowd, the band, the cover.</p>
+            </div>
+            <div class="role">
+              <img src="images/crew-phone.jpg" alt="">
+              <h6>Social</h6>
+              <p>Turn every set into vertical clips.</p>
+            </div>
+          </div>
+
+          <p class="also">Also hiring: <span class="tag">Sound</span> <span class="tag">Design</span> <span
+              class="tag">Writing</span></p>
+        </div>
+
+        <form class="crew-form" action="#">
+          <p class="form-title">Apply in 2 minutes</p>
+
+          <input type="text" class="field is-required" placeholder="Your name">
+          <input type="email" class="field is-required" placeholder="Student email">
+
+          <span class="field-label">Major</span>
+          <select class="field">
+            <option>Choose your major</option>
+            <option>Journalism</option>
+            <option>Media Production</option>
+            <option>Advertising</option>
+            <option>Public Relations</option>
+            <option>Communication Studies</option>
+            <option>Something else</option>
+          </select>
+
+          <p class="field-label">I want to help with</p>
+          <div class="checks">
+            <span><input type="checkbox"> Video</span>
+            <span><input type="checkbox"> Photo</span>
+            <span><input type="checkbox"> Social</span>
+            <span><input type="checkbox"> Sound</span>
+          </div>
+
+          <textarea class="field" rows="3" placeholder="Link to your work (TikTok, IG, portfolio...)"></textarea>
+
+          <div class="form-bottom">
+            <p class="form-note">Fields with a red border are required.</p>
+            <button type="submit" class="send" tabindex="3">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="4" y1="12" x2="19" y2="12" />
+                <polyline points="13 6 19 12 13 18" />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- ===== MERCH ===== -->
+    <div class="merch" id="merch">
+      <div class="section-top">
+        <span class="num">(05)</span>
+        <div class="section-title">Merch drop</div>
+        <p class="section-intro">Every dollar goes back into studio time for new artists.</p>
+      </div>
+
+      <div class="merch-grid">
+        <div class="product sold-out">
+          <img src="images/merch-vinyl.jpg" alt="merch">
+          <h4>Side B Tapes Vol. 2, pink + blue vinyl</h4>
+          <div class="product-bottom">
+            <span class="price">$22</span>
+            <span class="dot dot-red"></span>
+            <button class="add">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/merch-tee.jpg" alt="merch">
+          <h4>Crew tee, striped</h4>
+          <div class="product-bottom">
+            <span class="price">$15</span>
+            <span class="dot dot-amber"></span>
+            <button class="add">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="product">
+          <img src="images/merch-stickers.jpg" alt="merch">
+          <h4>Sticker + notebook pack</h4>
+          <div class="product-bottom">
+            <span class="price">$8</span>
+            <span class="dot dot-green"></span>
+            <button class="add">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <div class="footer-cols">
+      <div>
+        <h6>About</h6>
+        <p>B-SIDE is a student organization. We are run by media students, and every show is open to everyone.</p>
+      </div>
+      <div>
+        <h6>Explore</h6>
+        <a href="#shows">Shows</a>
+        <a href="#artists">Artists</a>
+        <a href="#sessions">Sessions</a>
+        <a href="#merch">Merch</a>
+      </div>
+      <div>
+        <h6>Follow</h6>
+        <div class="socials">
+          <a href="#"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" />
+            </svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <path d="M14 3v11a4 4 0 1 1-4-4" />
+              <path d="M14 3c0 3 2.5 5 5 5" />
+            </svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <rect x="2" y="5" width="20" height="14" rx="4" />
+              <polygon points="10 9 15 12 10 15" fill="currentColor" />
+            </svg></a>
+          <a href="#"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M7 10c3-1 7-1 10 1" />
+              <path d="M8 13c2.5-.7 5.5-.5 8 .8" />
+              <path d="M9 16c2-.5 4-.3 6 .6" />
+            </svg></a>
+        </div>
+        <p>hello@bside.example</p>
+      </div>
+    </div>
+
+    <div class="footer-big">B-SIDE</div>
+
+    <p class="legal">© 2026 B-SIDE. Photos by Unsplash photographers via Wikimedia Commons (CC0). Accessibility
+      statement: <a href="#" class="text-link">click here</a>.</p>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+/* RESET*/
+* {
+    padding: 0;
+    margin: 0. auto;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: rgb(14, 135, 135);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.web-nav {
+
+}
+
+#main-content {
+
+}
+
+.section {
+
+}
+
+section#section-hero {
+    font-size: 30px;
+    color: orange;
+}
+
+nav ul.nav-one a {
+    color: darkgreen;
+}
+
+
+ul > li {
+    color: hotpink;
+}
+
+ul > li a:hover {
+    color: rgb(162, 61, 112);
+}
+
+ul > li a:active {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+form input [type="name"] {
+
+}
+
+ul a[href="https://www.google.com/?zx=1790022498643"] {
+
+}
+
+ul li a.main-link:hover {
+    color: lime;
+}
+
+/*max width is 300px min width 100px max height is

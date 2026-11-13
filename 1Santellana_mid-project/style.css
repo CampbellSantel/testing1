@@ -1,0 +1,795 @@
+:root {
+    --color-background: #ffffff;
+    --color-text: #000000;
+    --color-secondary: #828789;
+
+    --font-display: "Crimson Text", serif;
+    --font-body: "Work Sans", sans-serif;
+
+    --font-small: clamp(0.875rem, 1vw, 1rem);
+    --font-base: clamp(1rem, 1.5vw, 1.125rem);
+    --font-lg: clamp(1.25rem, 2vw, 1.65rem);
+    --font-xl: clamp(1.75rem, 4vw, 2rem);
+    --font-hero: clamp(2rem, 8vw, 5.5rem);
+
+    --space-lg: 2rem;
+    --space-section: clamp(3rem, 8vw, 3.5rem);
+
+    --radius: 5px;
+
+    --leading-tight: 1.1;
+    --leading-normal: 1.6;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-base);
+    font-weight: 400;
+    line-height: var(--leading-normal);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-style: normal;
+    letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    line-height: var(--leading-tight);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/*section title
+section into sizing*/
+.site-header {
+    position: relative;
+}
+
+/*copieed code*/
+.menu-toggle {
+    /* TODO 21: HAMBURGER STEP 2: Hide the checkbox completely. Clicking the hamburger label will still tick it. */
+    display: none;
+}
+
+.hamburger {
+    /* TODO 22: HAMBURGER STEP 3: The hamburger holds 3 bars. Make it a flex container... */
+    display: flex;
+    /* TODO 23: ...and stack the 3 bars on top of each other. */
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.7rem 0.6rem;
+    border: 3px solid var(--color-secondary);
+    border-radius: var(--radius);
+}
+
+.hamburger span {
+    display: block;
+    /* TODO 24: HAMBURGER STEP 4: Draw the bars. Make each bar 26px wide... */
+    width: 26px;
+    /* TODO 25: ...and 3px tall. */
+    height: 3px;
+    background-color: var(--color-secondary);
+    /* TODO 26: HAMBURGER STEP 8a: Make the bars change smoothly when the menu opens: transition the transform over 0.3 seconds with ease. */
+    transition: transform .3s ease;
+}
+
+.nav-menu {
+    /* TODO 27: HAMBURGER STEP 5: On phones the menu should float OVER the page instead of pushing it down. Take it out of the normal flow (position). */
+    position: absolute;
+    /* TODO 28: Place the menu right under the navbar (100% from the top of the navbar). */
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* TODO 29: HAMBURGER STEP 6: Hide the menu. It stays hidden until the checkbox is checked (the :checked TODO below). */
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    background-color: #ffffff;
+    border: 3px solid var(--color-secondary);
+    border-radius: var(--radius);
+    z-index: 10000;
+}
+
+.menu-toggle:checked~.nav-menu {
+    /* TODO 30: HAMBURGER STEP 7: THE MAGIC LINE. When the menu checkbox is checked (:checked), show the menu as a flex container. */
+    display: flex;
+}
+
+.menu-toggle:checked~.hamburger span:nth-child(1) {
+    /* TODO 31: HAMBURGER STEP 8b: When the menu is open, turn the TOP bar into half of an X: move it down 8px (translateY), then rotate it 45 degrees. */
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle:checked~.hamburger span:nth-child(2) {
+    /* TODO 32: HAMBURGER STEP 8c: When the menu is open, make the MIDDLE bar disappear by scaling it to 0. */
+    transform: scale(0);
+}
+
+.menu-toggle:checked~.hamburger span:nth-child(3) {
+    /* TODO 33: HAMBURGER STEP 8d: When the menu is open, turn the BOTTOM bar into the other half of the X: move it up 8px, then rotate it -45 degrees. */
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.4rem 0;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: .5rem 1.5rem;
+}
+
+
+.nav-link {
+    font-family: var(--font-display);
+    font-size: var(--font-lg);
+    font-weight: 400;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: var(--font-xl);
+    font-weight: 600;
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.logo-accent {
+    color: var(--color-secondary);
+}
+
+.index-hero {
+    display: grid;
+    justify-items: start;
+    align-content: end;
+    row-gap: 0.25rem;
+    text-align: left;
+    min-height: 75vh;
+    padding: 4rem 1.5rem;
+    color: var(--color-background);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url("assets/images/image_7.webp") center / cover no-repeat;
+    background-attachment: fixed;
+    /*Image by Sunrise from Pixabay*/
+}
+
+.hero-extra {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-background);
+    text-decoration: underline;
+}
+
+/* i used the VSCode chatbot to add the background image.*/
+
+.hero-kicker {
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin: 0;
+
+}
+
+.hero-title {
+    font-size: var(--font-hero);
+    max-width: 70%;
+    text-align: left;
+    margin: 0;
+}
+
+.hero-description {
+    font-size: var(--font-base);
+    max-width: 50%;
+    text-align: left;
+}
+
+.featured-articles {
+    padding: var(--space-section);
+    background-color: var(--color-background);
+    min-height: 75vh;
+}
+
+.section-title {
+    text-decoration: underline;
+    font-size: var(--font-xl);
+    max-width: 1300px;
+    /*vs code to get the title to line up with the articles.*/
+    margin: 0 auto 2rem;
+    /*vs code to get the title to line up with the articles.*/
+    font-weight: 600;
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /*this one was suggested by ChatGPT*/
+    gap: 1rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.article-card {
+    display: flex;
+    /*this was VSCode*/
+    flex-direction: column;
+    /*this was VSCode*/
+    overflow: hidden;
+    border-radius: var(--radius);
+    background-color: var(--color-background);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* i stole the box shadow code from you*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*chatgpt*/
+
+}
+
+.article-card:hover {
+    transform: translateY(-5px);/*chatgpt*/
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /*chatgpt*/
+}
+
+.article-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+#article-image-4 {
+    object-position: top;
+}
+
+/*begining of section that was mostly added by the VSCode chatbot.*/
+.article-kicker,
+.article-title,
+.read-more {
+    margin-right: 0.75rem;
+    margin-left: 0.75rem;
+}
+
+.article-title {
+    /*this was VSCode*/
+    flex-grow: 1;
+    /*this was VSCode*/
+    line-height: var(--leading-tight);
+    max-width: 70%;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-family: var(--font-display);
+    font-size: var(--font-lg);
+    font-weight: 500;
+    color: var(--color-text);
+
+}
+
+.article-kicker {
+    padding-top: 0.75rem;
+    color: var(--color-secondary);
+    font-size: var(--font-small);
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: auto;
+    margin-bottom: 0.75rem;
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: var(--font-small);
+}
+
+/* end section that was mostly added by the VSCode chatbot. I was struggling.*/
+
+.gallery-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    /*chatgpt fixed this line for me*/
+    padding: var(--space-section);
+    color: var(--color-background);
+    background-color: var(--color-text);
+    min-height: 25vh;
+}
+
+.gallery-description {
+    max-width: 750px;
+    margin: 0 auto 2rem;
+    line-height: var(--leading-normal);
+    color: var(--color-secondary);
+}
+
+.related-articles {
+    padding: var(--space-section);
+}
+
+.gallery-preview .section-title {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto 2rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 1rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.gallery-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius);
+}
+
+.view-gallery {
+    display: block;
+    /*vscode did this*/
+    width: fit-content;
+    /*vscode did this*/
+    margin: 1.5rem auto 0;
+    /*vscode did this*/
+    text-decoration: none;
+    color: #828789;
+}
+
+footer {
+    padding: 4rem 1.5rem 2rem;
+    color: var(--color-background);
+    background-color: var(--color-text);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    /*Vs code*/
+    align-items: center;
+    /*Vs code*/
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*Vs code down below*/
+.footer-content p {
+    margin: 0;
+    text-align: right;
+}
+
+.footer-logo {
+    font-family: var(--font-display);
+    font-size: var(--font-lg);
+    font-weight: 600;
+    color: var(--color-background);
+    text-decoration: none;
+}
+
+.featured-article-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+    color: var(--color-text);
+}
+
+/*this was also suggested by chat to fix sizing*/
+.featured-article-title {
+    font-size: var(--font-hero);
+    line-height: var(--leading-tight);
+    max-width: 900px;
+    margin: 0.5rem 0 1rem;
+}
+
+.article-hero img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center;
+    border-radius: var(--radius);
+}
+
+.pull-quote {
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: var(--space-lg);
+    font-size: var(--font-lg);
+    font-style: italic;
+    text-align: center;
+}
+
+.article-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--space-section);
+    color: var(--color-text);
+    background-color: var(--color-background);
+}
+
+/*this section was suggested by chat gpt to better my readability*/
+.article-content>p,
+.article-content>h2 {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.category {
+    font-style: italic;
+    color: var(--color-secondary);
+}
+
+h2 {
+    font-size: var(--font-lg);
+    font-weight: 700;
+    line-height: var(--leading-normal);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    font-size: var(--font-small);
+}
+
+.about-hero {
+    display: grid;
+    justify-items: start;
+    align-content: end;
+    row-gap: 0.25rem;
+    text-align: left;
+    min-height: 25vh;
+    padding: 4rem 1.5rem;
+    color: var(--color-background);
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+        url("assets/images/image_8.webp") center / cover no-repeat;
+    background-attachment: fixed;
+    /*--Anastasia Shuraeva on Pexels*/
+}
+
+.our-mission {
+    padding: var(--space-section);
+}
+.mission-content,
+.team-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.mission-content h2,
+.mission-content p {
+    text-align: left;
+}
+
+/*the team section cards ere orginially created by Chatgpt, but i did change a few things like the color and sizing.*/
+.team-section {
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--space-section);
+    text-align: left;
+    color: var(--color-background);
+    background-color: var(--color-text);
+}
+
+
+.team-intro {
+    width: 100%;
+    margin: 0 0 35px; /*this was chatgpt*/
+}
+
+.name {
+    font-size: var(--font-lg);
+}
+
+.team-grid { /*this was all chatgpt*/
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0;
+    gap: var(--space-lg);
+    color: var(--color-text);
+}
+
+.team-card {
+    background-color: var(--color-background);
+    text-align: left;
+    overflow: hidden;
+    border-radius: var(--radius);
+}
+
+.team-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.team-info {
+    padding: 20px;
+}
+
+.team-info h3 {
+    margin-bottom: 8px;
+}
+
+.team-role {
+    font-style: italic;
+    color: var(--color-secondary);
+    margin-bottom: 12px;
+}
+
+/*the entire contact section was editied by Chatgpt*/
+.contact-us {
+    padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+    background-color: #f5f3f0;
+    color: var(--color-text);
+}
+
+.contact-content {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-us .section-title {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.contact-intro {
+    max-width: 550px;
+    margin: 0 auto 2rem;
+    line-height: 1.8;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.contact-details p {
+    margin: 0;
+}
+
+.contact-details a {
+    color: var(--color-text);
+    text-underline-offset: 3px;
+}
+
+.contact-details a:hover {
+    color: var(--color-secondary);
+}
+
+
+
+
+/*everything added in the media queries was generated by chatgpt*/
+
+
+/* Tablet: 769px–1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Article and gallery grids */
+    .article-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Team cards */
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .team-card img {
+        height: 250px;
+    }
+
+    .mission-content,
+    .team-content {
+        max-width: 100%;
+    }
+
+    /* Disable fixed backgrounds on smaller screens */
+    .index-hero,
+    .about-hero {
+        background-attachment: scroll;
+    }
+}
+
+
+/* Mobile: 767px and narrower */
+@media (max-width: 767px) {
+
+    /* Navigation */
+    .navbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .hamburger {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+        background-color: var(--color-background);
+        border: 1px solid var(--color-secondary);
+        z-index: 10000;
+    }
+
+    .menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    /* Hero sections */
+    .index-hero {
+        min-height: 65vh;
+        padding: 3rem 1.25rem;
+        background-attachment: scroll;
+    }
+
+    .hero-title,
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .about-hero {
+        min-height: 20vh;
+        padding: 2.5rem 1rem;
+        background-attachment: scroll;
+    }
+
+    .about-hero .hero-title {
+        max-width: 100%;
+        font-size: clamp(2rem, 10vw, 3rem);
+    }
+
+    /* One column for smaller screens */
+    .article-grid,
+    .gallery-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Reduce section spacing */
+    .featured-articles,
+    .gallery-preview,
+    .related-articles,
+    .our-mission,
+    .team-section,
+    .contact-us {
+        padding: 2rem 1rem;
+    }
+
+    .featured-article-header,
+    .article-content {
+        padding: 2rem 1rem;
+    }
+
+    /* Article headings and cards */
+    .featured-article-title {
+        font-size: clamp(2rem, 9vw, 3.5rem);
+    }
+
+    .article-title {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: var(--font-lg);
+        margin-bottom: 1.25rem;
+    }
+
+    /* Team cards */
+    .team-card img {
+        height: 260px;
+    }
+
+    .team-info {
+        padding: 1rem;
+    }
+
+    .mission-content,
+    .team-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-content p {
+        text-align: center;
+    }
+}
+
+
+/* Desktop: 1025px and wider */
+@media (min-width: 1025px) {
+
+    /* Show horizontal navigation on desktop */
+    .hamburger {
+        display: none;
+    }
+
+    .nav-menu {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+}
+/* Tablet: 768px–1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .team-card img {
+        height: 250px;
+    }
+}

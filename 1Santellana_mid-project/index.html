@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | VogueChic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+     <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="index.html" class="logo">Vogue<span class="logo-accent">Chic</span></a>
+
+            <!-- The hidden checkbox (THE KEY!): checked = menu open -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+
+            <!-- The hamburger icon is a LABEL: clicking it ticks the checkbox -->
+            <label for="menu-toggle" class="hamburger" aria-label="Menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </label>
+
+            <!-- The menu comes AFTER the checkbox, so CSS can use: .menu-toggle:checked ~ .nav-menu -->
+            <ul class="nav-menu">
+                <li><a href="articles.html" class="nav-link">Daily Article</a></li>
+                <li><a href="gallery.html" class="nav-link">Featured Articles</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="index-hero" >
+            <p class="hero-kicker">Featured</p>
+            <h1 class="hero-title">The New Season,<br>Refined</h1>
+            <p class="hero-description">How today's fashion icons are redefining modern elegance</p>
+            <a href="articles.html" class="hero-extra">
+    Read More &rarr;
+</a>
+        </section>
+        <section class="featured-articles">
+            <h2 class="section-title">Featured Articles</h2>
+            <div class="article-grid">
+                <article class="article-card">
+                    <img src="assets/images/image_1.webp"
+                        alt="Three people posed in a clothing store, with racks of garments in the background."
+                        class="article-image">
+                        <!--Copyright Cottonbro Studio on Pexels-->
+                    <p class="article-kicker">Fashion</p>
+                    <h3 class="article-title">The Rise of Sustainable Fashion</h3>
+                    <a href="articles.html" class="read-more">Read More &rarr;</a>
+                </article>
+                <article class="article-card">
+                    <img id="article-image-2" src="assets/images/image_2.webp"
+                        alt="Five young adults pose casually on a graffiti-covered concrete skate ramp, wearing colorful streetwear; murals and grass create a relaxed, urban fashion-shoot mood."
+                        class="article-image">
+                        <!-- Tima Miroshneichenko on Pexels--> 
+                    <p class="article-kicker">Culture</p>
+                    <h3 class="article-title">The Intersection of Fashion and Art</h3>
+                    <a href="articles.html" class="read-more">Read More &rarr;</a>
+                </article>
+                <article class="article-card">
+                    <img src="assets/images/image_3.webp"
+                        alt="Models in white clothing pose in a dim, brick-walled loft with tall windows; a shirtless man gestures among them, creating a moody fashion editorial scene."
+                        class="article-image">
+                        <!--Copyright Cottonbro Studio on Pexels--> 
+                    <p class="article-kicker">Trends</p>
+                    <h3 class="article-title">The Hottest Fashion Trends of the Year</h3>
+                    <a href="articles.html" class="read-more">Read More &rarr;</a>
+                </article>
+                <article class="article-card">
+                    <img id="article-image-4" src="assets/images/image_4.webp"
+                         alt="A red-haired woman sits on a bed beside a woven tray with candles and bowls, holding her hands near her face in a calm, reflective pose."
+                         class="article-image">
+                         <!--Yan Krukau on Pexels--> 
+                    <p class="article-kicker">Beauty</p>
+                    <h3 class="article-title">The Future of Skincare</h3>
+                    <a href="articles.html" class="read-more">Read More &rarr;</a>
+                </article>
+                <article class="article-card">
+                    <img src="assets/images/image_5.webp"
+                        alt="A woman in a red-and-black evening gown leans against a stone balustrade in a warmly lit hallway, posing with a poised, dramatic expression."
+                        class="article-image">
+                        <!--Felix Young on Pexels--> 
+                    <p class="article-kicker">Lifestyle</p>
+                    <h3 class="article-title">The Evolution of Evening Wear</h3>
+                    <a href="articles.html" class="read-more">Read More &rarr;</a>
+                </article>
+                <article class="article-card">
+                    <img src="assets/images/image_6.webp"
+                        alt="Storefront mannequins model winter outfits beside a geometric display of hanging fabric swatches; warm coats and knits create a polished, contemporary fashion mood."
+                        class="article-image">
+                         <!--Diane on Pexels--> 
+                    <p class="article-kicker">Interviews</p>
+                    <h3 class="article-title">Exclusive Interview with a Fashion Icon</h3>
+                    <a href="articles.html" class="read-more">Read More &rarr;</a>
+                </article>
+            </div>
+        </section>
+        <section class="gallery-preview">
+            <h2 class="section-title">Gallery Preview</h2>
+            <div class="gallery-grid">
+                <img src="assets/images/image_1.webp" alt="Three people posed in a clothing store, with racks of garments in the background."
+                        class="gallery-image">
+                        <!--Copyright Cottonbro Studio on Pexels--> 
+                <img src="assets/images/image_2.webp" alt="Five young adults pose casually on a graffiti-covered concrete skate ramp, wearing colorful streetwear; murals and grass create a relaxed, urban fashion-shoot mood."
+                        class="gallery-image">
+                        <!-- Tima Miroshneichenko on Pexels--> 
+                <img src="assets/images/image_3.webp" alt="Models in white clothing pose in a dim, brick-walled loft with tall windows; a shirtless man gestures among them, creating a moody fashion editorial scene."
+                        class="gallery-image">
+                        <!--Copyright Cottonbro Studio on Pexels--> 
+                <img src="assets/images/image_4.webp" alt="A red-haired woman sits on a bed beside a woven tray with candles and bowls, holding her hands near her face in a calm, reflective pose."
+                        class="gallery-image">
+                        <!--Yan Krukau on Pexels--> 
+            </div>
+            <a href="gallery.html" class="view-gallery">View Full Gallery &rarr;</a>
+        </section>
+        </main>
+
+    <footer>
+        <div class="footer-content">
+        <a class="footer-logo" href="index.html">Vogue<span class="logo-accent">Chic</span></a>
+        <p>&copy; 2024 VogueChic. All rights reserved.</p>
+    </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

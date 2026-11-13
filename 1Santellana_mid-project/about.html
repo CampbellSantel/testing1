@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | VogueChic</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="index.html" class="logo">Vogue<span class="logo-accent">Chic</span></a>
+
+            <!-- The hidden checkbox (THE KEY!): checked = menu open -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+
+            <!-- The hamburger icon is a LABEL: clicking it ticks the checkbox -->
+            <label for="menu-toggle" class="hamburger" aria-label="Menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </label>
+
+            <!-- The menu comes AFTER the checkbox, so CSS can use: .menu-toggle:checked ~ .nav-menu -->
+            <ul class="nav-menu">
+                <li><a href="articles.html" class="nav-link">Daily Article</a></li>
+                <li><a href="gallery.html" class="nav-link">Featured Articles</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <h1 class="hero-title">About VogueChic</h1>
+        </section>
+        <section class="our-mission">
+            <div class="mission-content">
+            <h2 class="section-title">Our Mission</h2>
+            <p>VogueChic is a fashion publication dedicated to exploring modern style, beauty, and fashion trends. Our
+                mission is to inspire readers to express themselves through clothing while making fashion feel creative,
+                accessible, and personal. From timeless wardrobe essentials to the latest trends, we celebrate
+                individuality and the art of effortless style.</p>
+            </div>
+        </section>
+
+        <section class="team-section">
+            <div class="team-content">
+            <h2 class="section-title">Meet the Team</h2>
+            <p class="team-intro">
+                Meet the creative team behind VogueChic.
+            </p>
+
+            <div class="team-grid">
+
+                <article class="team-card">
+                    <img src="assets/images/Chathy.webp" alt="Portrait of the editor-in-chief">
+                    <!--image by bishenova on Pexels-->
+                    <div class="team-info">
+                        <h3 class="name">Chathy G. P. Terina</h3>
+                        <p class="team-role">Editor-in-Chief</p>
+                        <p>
+                            Chathy oversees the publication's creative
+                            direction and editorial content.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <img src="assets/images/Alex.webp" alt="Portrait of the fashion writer">
+                    <!--image by Emiliano Vittoriosi on Pexels -->
+                    <div class="team-info">
+                        <h3 class="name">Alex Morgan</h3>
+                        <p class="team-role">Fashion Writer</p>
+                        <p>
+                            Alex writes about fashion trends and
+                            styling inspiration.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="team-card">
+                    <img src="assets/images/Jordan.webp" alt="Portrait of the creative director">
+                    <!--image by  Oliver Dohrn on Pexels-->
+                    <div class="team-info">
+                        <h3 class="name">Jordan Blake</h3>
+                        <p class="team-role">Creative Director</p>
+                        <p>
+                            Jordan creates the photography and
+                            visual content for VogueChic.
+                        </p>
+                    </div>
+                </article>
+                </div>
+            </div>
+        </section>
+        <section class="contact-us"> <!--the contact seciton was editied by chatgpt for better layout.-->
+    <div class="contact-content">
+        <h2 class="section-title">Contact Us</h2>
+
+        <p class="contact-intro">
+            Have a question, story idea, or collaboration opportunity?
+            We'd love to hear from you.
+        </p>
+
+        <div class="contact-details">
+            <p>
+                <strong>Email:</strong>
+                <a href="mailto:hello@voguechic.com">hello@voguechic.com</a>
+            </p>
+
+            <p>
+                <strong>Location:</strong> Lubbock, Texas
+            </p>
+
+            <p>
+                <strong>Social Media:</strong> @VogueChic
+            </p>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <a class="footer-logo" href="index.html">Vogue<span class="logo-accent">Chic</span></a>
+            <p>&copy; 2024 VogueChic. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device=width, initial-scale=1.0">
+    <title>Contact US</title>
+</head>
+
+<body>
+    <form action="/submit" method="get"> <!-- post is for sending indformation--><!--get is for recieving information-->
+        <fieldset>
+            <legend> Contact Information</legend>
+            <label for="first-name">Name:</label>
+            <!--type is key for what type of input. name, number, password, etc-->
+            <input type="name" -- id="first-name" name="first-name" placeholder="Your full name..." required>
+            <!--this makes the input required/unskippable-->
+
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email..." required>
+
+            <br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your phone number..." required
+            maxlength="10">
+        </fieldset>
+
+        <br>
+
+        <label for="service">Service:</label>
+        <select name="services" id="service">
+            <option value="select">Select a service...</option>
+            <option value="art">Art Direction</option>
+            <option value="brand">Brand Film</option>
+            <option value="colour">Colour Finish</option>
+        </select>
+
+        <br>
+        <fieldset>
+            <legend>Budget Range</legend>
+            <!--the webpage knows these are all related because they have the same name=""-->
+            <input type="radio" name="budget" id="budget-1">
+            <label for="budget-1">Under 5k</label>
+            <input type="radio" name="budget" id="budget-2">
+            <label for="budget-2">Over 5k</label>
+            <input type="radio" name="budget" id="budget-3">
+            <label for="budget-3">Over 10k</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Which extras do you need?</legend>
+            <input type="checkbox" name="extras" id="extra-editing">
+            <label for="extra-editing">Editing</label>
+            <input type="checkbox" name="extras" id="extra-social">
+            <label for="extra-social">Social Media</label>
+            <input type="checkbox" name="extras" id="extra-animation">
+            <label for="extra-animation">Animation</label>
+            <input type="checkbox" name="extras" id="extra-print">
+            <label for="extra-print">Printed Photographs</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <label for="date">Ideal Shoot Date</label>
+            <input type="date" id="date" name="date">
+        </fieldset>
+        <br>
+        <!--<textarea:cols:rows-->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="15" placeholder="Enter your message...">
+    </textarea> <!--cols= width, rows= height. most of the time, they dont use columns?-->
+        <br>
+
+<label for="upload" >Upload your file:</label>
+        <input type="file" id="upload" name="upload">
+        <br>
+        <label for="time">Ideal Shoot Time:</label>
+        <input type="time" id="time" name="time"> 
+        <br>
+    <label for="pasword">Password:</label>
+    <input type="password" id="pasword" name="pasword">
+    <br>
+    <label for="color">Choose a color:</label>
+    <input type="color" id="color" name="color">
+    <br>
+    <label for="range">Choose a range:</label>
+    <input type="range" id="range" name="range" min="0" max="100">
+    <br>
+    <label for="number">Choose a number:</label>
+    <input type="number" id="number" name="number" min="0" max="100">
+    <br>
+    <label for="search">Search:</label>
+    <input type="search" id="search" name="search">
+    <br>
+    <label for="url">Enter a URL:</label>
+    <input type="url" id="url" name="url">
+    <br>
+
+
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+
+</html>
